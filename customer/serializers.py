@@ -1,0 +1,21 @@
+from rest_framework import serializers 
+from customer.models import customer,shoping_order,deliveries
+
+#Creat serializers Here.
+class CustomerSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = customer
+        fields='__all__'        
+
+
+# Creating Shoping_Order_Serializer ....!!!!
+class shoping_orderSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model= shoping_order
+        fields="__all__"
+
+#Creating Deliveries Serializer .......!!!!!!
+class deliveriesSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model= deliveries
+        fields="__all__"
