@@ -16,10 +16,14 @@ class shoping_order(models.Model):
     customer_id=models.ForeignKey(customer, on_delete=models.CASCADE)
     date=models.DateTimeField(auto_now=True)
 
+# Creating categories model ....!!!!
+class categories(models.Model):
+    categories_id=models.AutoField(primary_key=True)
+    categories_name=models.CharField(max_length=40)
+    categories_type=models.CharField(max_length=25)
+
 # Creating Deliveries model ....!!!!
 class deliveries(models.Model):
     deliveries_id=models.AutoField(primary_key=True)
     customer_id=models.ForeignKey(customer,on_delete=models.CASCADE)
-    date=models.DateTimeField(auto_now=True)
-
-    
+    date=models.DateTimeField(auto_now=True)    
