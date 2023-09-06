@@ -1,5 +1,5 @@
 from rest_framework import serializers 
-from customer.models import customer,shoping_order,deliveries
+from customer.models import customer,shoping_order,deliveries,categories
 
 #Creat serializers Here.
 class CustomerSerializer(serializers.HyperlinkedModelSerializer):
@@ -13,6 +13,14 @@ class shoping_orderSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model= shoping_order
         fields="__all__"
+ 
+        
+#Creating categories_Serializer ....!!!!
+class categoriesSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model= categories
+        fields="__all__"
+
 
 #Creating Deliveries Serializer .......!!!!!!
 class deliveriesSerializer(serializers.HyperlinkedModelSerializer):
